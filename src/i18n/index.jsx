@@ -2,6 +2,7 @@ import { messages as paragonMessages } from '@edx/paragon';
 
 import arMessages from './messages/ar.json';
 import deMessages from './messages/de.json';
+import plMessages from './messages/pl.json';
 import deDEMessages from './messages/de_DE.json';
 import es419Messages from './messages/es_419.json';
 import faIRMessages from './messages/fa_IR.json';
@@ -20,6 +21,7 @@ import zhCNMessages from './messages/zh_CN.json';
 const appMessages = {
   ar: arMessages,
   de: deMessages,
+  pl: plMessages,
   'de-de': deDEMessages,
   'es-419': es419Messages,
   'fa-ir': faIRMessages,
