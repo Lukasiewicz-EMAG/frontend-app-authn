@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   Form, TransitionReplace,
@@ -7,6 +7,28 @@ import PropTypes from 'prop-types';
 
 const FormGroup = (props) => {
   const [hasFocus, setHasFocus] = useState(false);
+  useEffect(() => {
+    const checkAutofill = () => {
+      const emailOrUsernameInput = document.getElementById('emailOrUsername');
+      const userName = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+
+      if (userName && userName.matches(':-webkit-autofill')) {
+        userName.classList.add('has-value');
+      }
+
+      if (emailOrUsernameInput && emailOrUsernameInput.matches(':-webkit-autofill')) {
+        emailOrUsernameInput.classList.add('has-value');
+      }
+
+      if (passwordInput && passwordInput.matches(':-webkit-autofill')) {
+        passwordInput.classList.add('has-value');
+      }
+    };
+
+    const interval = setInterval(checkAutofill, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleFocus = (e) => {
     setHasFocus(true);
