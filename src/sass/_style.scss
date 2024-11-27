@@ -46,7 +46,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 
 
 .btn-brand {
-  color: #FFFFFF;
+  color: $white;
   background-color: $main-blue;
   border-color: $main-blue;
 
@@ -58,7 +58,10 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   &:focus {
     outline: none;
   }
-
+  &:not(:disabled):not(.disabled):active, .btn-brand:not(:disabled):not(.disabled).active, .show > .btn-brand.dropdown-toggle {
+    background-color: $main-blue;
+    border-color: $main-blue;
+  }
   &:focus::before {
     content: "";
     position: absolute;
@@ -627,3 +630,4 @@ select.form-control {
 .pgn__form-control-decorator-trailing {
   right: 0 !important;
 }
+
