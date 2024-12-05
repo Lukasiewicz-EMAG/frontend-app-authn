@@ -40,7 +40,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
     width: 50vw;
     max-height: 100vh;
     justify-content: center;
-    margin-top: 8rem;
+    margin: 0;
     padding: 0 50px;
 }
 
@@ -128,7 +128,8 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 
 .col-md-9 {
   flex: 0 0 100%;
-  max-width: 100%; 
+  max-width: 100%;
+  align-content: center;
 }
 
 .text-welcome {
@@ -148,7 +149,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   padding: 40px 20px;              
   border-radius: 20px; 
   margin: 0 auto;
-  margin-top: 11rem;
+  margin-bottom: 30rem;
   max-width: 45%;
 }
 
@@ -156,6 +157,16 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   max-width: 100%;
   height: auto; 
 }
+
+.layout {
+  display: flex;
+  align-items: center;
+}
+
+.main-content {
+  min-height: 425px !important;
+}
+
 
 // Forgot Password Page
 .forgot-password-button-width {
@@ -536,6 +547,7 @@ select.form-control {
   width: 100%; 
   max-height: 100vh;
   margin-top: 0;
+  margin-bottom: 0;
   padding: 0 50px;
 }
 
