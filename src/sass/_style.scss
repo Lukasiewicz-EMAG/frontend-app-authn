@@ -589,6 +589,42 @@ select.form-control {
   .welcome-page-content {
     padding-top: 1.5rem !important;
   }
+  .text-welcome {    
+    font-size: 24px;
+  }
+  .btn-brand {
+    border: none;
+    outline: none;
+  
+    &:hover {
+      border: none;
+      outline: none;
+    }
+  
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:not(:disabled):not(.disabled):active, .btn-brand:not(:disabled):not(.disabled).active, .show > .btn-brand.dropdown-toggle {
+      border: none;
+      outline: none;
+    }
+    &:focus::before {
+      content: "";
+      border: none;
+      outline: none;
+    }
+  }
+  .nav-tabs .nav-link.active:focus::before, .nav-tabs .nav-item.show .nav-link:focus::before {
+    content: "";
+    border: none;
+    outline: none;
+  }
+  .nav-tabs .nav-link:focus::before {
+    content: "";
+    border: none;
+    outline: none;
+}  
 }
 
 
